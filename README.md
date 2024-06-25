@@ -22,7 +22,7 @@ Donde les sacaremos su Transformada rápida de Fourier y a esta veremos su espec
 Primero vamos a dividir el espectro de potencias en dos partes diferentes aquellos datos que son de 0 a 1 mes y los de 1.5 a 6 meses, para ver la pendiente de cada uno de estos en cada década.![f4ecd21f-3f05-44f7-944b-34ea6972715e](https://github.com/dafelisioso/Servicio-social/assets/67986088/0c0888d0-2c6b-42c4-aeca-c10e5132b194)
 ![7b92b182-fc8a-4838-bdc3-3a46b04eebde](https://github.com/dafelisioso/Servicio-social/assets/67986088/fb299e46-0d56-47bd-8e3f-8157d7affaed)
 Como se puede ver en la ultima figura  e han ido separando las pendientes de pequeña y mediana escala, por lo que se ha perdido cierta relación entre estas dando a entender que existe mayor variación de temepraatura en las ultimas décadas, entonces para entrar más a detalle con esto vamos a comparar el RMSE de un ajuste lineal que abarrque todo el espectro y uno de grado 2, con lo que se obtiene lo siguiente.![42b2451f-c8cb-4834-bcb2-a925f540635a](https://github.com/dafelisioso/Servicio-social/assets/67986088/9ee0f2cb-0e6a-4296-83b4-31ab2951017b)
-Decade  Linear Slope  Linear Intercept    Linear RMSE  Nonlinear Coeff a2  \
+    Decade  Linear Slope  Linear Intercept    Linear RMSE  Nonlinear Coeff a2  \
 0     1880     -1.813152          0.121576   91079.790458           -0.432310   
 1     1890     -1.729628          0.330065   75954.940482           -0.398875   
 2     1900     -1.749620          0.342929   90713.606891           -0.466359   
@@ -47,8 +47,15 @@ Decade  Linear Slope  Linear Intercept    Linear RMSE  Nonlinear Coeff a2  \
 4            -2.931189           -0.258810     1985.303912  
 5            -3.175537           -0.410722     2773.316177  
 6            -3.283519           -0.455700     2580.923327  
-...
+7            -3.471453           -0.507441     3946.066378  
+8            -3.583308           -0.493071     2168.204670  
+9            -3.438414           -0.401527     3827.983998  
+10           -3.597715           -0.516574     4001.010935  
 11           -3.746177           -0.544196     5381.520432  
 12           -3.640283           -0.541401     3520.876194  
 13           -3.698992           -0.583570     4704.260139  
 14           -3.731645           -1.188971      479.269731  
+
+
+Donde si se pone atención el RMSE para la lineal a aumetnado bastante con el tiempo, dandonos a entender que justo ya no es un buen ajuste para el espectro de potencias.
+
