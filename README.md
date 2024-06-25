@@ -59,3 +59,14 @@ Como se puede ver en la ultima figura  e han ido separando las pendientes de peq
 
 Donde si se pone atención el RMSE para la lineal a aumetnado bastante con el tiempo, dandonos a entender que justo ya no es un buen ajuste para el espectro de potencias.
 
+
+
+
+
+Una parte immportante de este proyecto es utilizar Dinamic Model Descomposition(DMD) para hacer una descomposición de los valores de la temeperatura y ver si existen ciertos modos importantes que nos ayuden a entender de una mejor manera algunos ciclos de temepratura porlos que ha pasado la Tierra a lo largo del tiempo.  Pero el DMD tiene un gran problema y es que es muy sencible a el ruido o datos atípicos, al tratarse de datos reales se encuentran muchos de estos, por lo que una forma de tratar de arreglar este problema es segmentar los valores en partes más pequeñas.Por lo que vamos a segmentar a los datos que se enceuntran en las corrietnes marinas.
+![c72aac0c-c69c-4304-bf89-b70b9ada84d0](https://github.com/dafelisioso/Servicio-social/assets/67986088/a3d10ec8-a9ed-4f62-a6da-a13e69a930ba)
+Y ya con este DMD, primero trataremos de hacer algunas reconstrucciones de los datos reales, por ejemplo aquí esta de la temperatura  para la corrietne Norewegian.
+
+![adc0ee1b-0876-4910-9dce-a276b179e506](https://github.com/dafelisioso/Servicio-social/assets/67986088/5884d8ec-69aa-43af-9186-3db01f5d8218)
+
+Para esta reconstrucción se separaron los datos de la temperatura por cada 10 años,por lo que se puede ver que a principios de las décadas los datos recnsotruidos salen muy mal,por el efecto de frontera, pero se van nivelando con el tiempo
