@@ -1,19 +1,20 @@
 # Servicio-social
 Este repositorio incluye mis trabajos para el servicio soial en Aprendizaje de Máquina sobre el Impacto del Cambio en el Uso del Suelo sobre la Biodiversidad y el Bienestar.
-Se sabe que el cambio climatico es una realidad y cada día se tiene unas temperaturas más altas, por lo que es de suma importancia investigar este fenómeno desde distintas perspectivas, es por eso que en este trabajo se observa el cambio clímatico desde los 1850s hasta la actualidad, observando las zonas en donde mayor ha habido cambios.
+Se sabe que el cambio climatico es una realidad y cada día se tiene unas temperaturas más altas, por lo que es de suma importancia investigar este fenómeno desde distintas perspectivas, es por eso que en este trabajo se observa el cambio clímatico desde los 1850s hasta la actualidad.
 
-![image](https://github.com/dafelisioso/Servicio-social/assets/67986088/c062c28b-aeb3-416e-a861-33fe1f5da950)
-
-
-Queremos ver como se comporta la temperatura en las distitnas regiones de ICC
-![5dbb6c14-c126-45ba-bf77-71d3847e0884](https://github.com/dafelisioso/Servicio-social/assets/67986088/17028b97-9507-423a-aa2e-95cdc6ef64af)
-![4467e6b6-6812-4b52-9d5f-0041d5188800](https://github.com/dafelisioso/Servicio-social/assets/67986088/6dc0ac44-c6a6-4752-9a01-435c36321161)
-Como se puede observar el aumento de la temperatura se ha comportado de manera diferente en cada región por lo que es importante verlas de manera independiente pero también de manera conjunta,por lo que nos interesa ver como son las correlaciones entre estas regiones.
-![1f4e26aa-915f-41b1-99fe-3716e6c4a7d9](https://github.com/dafelisioso/Servicio-social/assets/67986088/e54840ed-7830-4847-960b-222a05225d9b)
-Donde logramos observar que en efecto hay partes del planeta las cuales estan muy correlacionadas en cuestión de la temperatura, suelen ser las que estan cerca entre si o comparten latitudes parecidas.
-
-Queremos observar si existen ciertos periodos que se repiten a lo largo del tiempo en las regiones, por lo que vamos a utilizar la transformada de Fourier para conseguir su espectro.
-![0e52c4d1-8f84-48bf-be97-b8af4b8b9d64](https://github.com/dafelisioso/Servicio-social/assets/67986088/d47eceed-1a48-4a3d-8b47-938cb05a74cf)
+## Espectros de Potencia
+Utilizando los datos de https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_daily.txt observamos la anomalia de la temperatura a lo largo del tiempo desde 1880, vamos a dividir los datos en su respectiva década a la cual le vamos a aplicar la transformada de Fourier, para obtener su especto de potencia.
+Una vez teniendo esto, vamos a dividir este espectro en dos partes que nos interesa analizar, las series de tiempo cortas(0-45 días) y de medio alcnace(45-90 días?) para analizar las pendientes de estas y ver el cambio a lo largo de las décadas de las pendientes y si se pierde la correlación entre ambos periodos de días.
 
 
+## Anlaisis de comunidades a partir de la temperatura
+Utilizando los datos geograficos y de temperatura a lo largo de las decadas desde 1850 queremos ver cuales son algunas comunidades que se crean y como han cambiado estas a lo largo del tiempo.
+Primero teneindo los datos de __________  
+Interpolamos los datos vacios bajo los siguientes criterios:
+1111
+111
+111
 
+Para todo punto del mapa le vamos a sacar su infomración mutua comparado con todos los otros puntos, para cada década, con lo que vamos a optener una matriz para cada una de estas.
+Con estas matrices ahora proseguimos a crear una red goegráfica en donde si la información mutua entre cualquier par de nodos es mayor a 0.8 se crea una arista entre estos una vez que tengamos nuestras redes queremos detectar las comunidades de estas, por lo que vamos a utilizar el método de Louvein para obtenerlas, surge el problema de que no detecta las mismas comubidades para décadas distitnas, por lo que se creo una función que compara cada comunidad con las de la década anterior para encontrar las comunidades más parecidas en vace a los nodos que se encuentran en esta, así le aplicamos la misma etiqueta a las comunidades a lo largo  de las décadas, una vez con esto le  aplicamos algunas métricas a ñas redes, donde observamos la Modularidad, el número de comunidades y vemos cuntos nodos se quedan constantes a lo largo de las transicciones de las décadas
+![a7bfe0ac-4402-4bce-890e-4f67f5ffb454](https://github.com/user-attachments/assets/2f21425a-f8f4-48e6-9b93-2f256c1fd87c)
