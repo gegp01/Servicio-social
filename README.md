@@ -17,5 +17,6 @@ Interpolamos los datos vacios bajo los siguientes criterios:
 
 Para todo punto del mapa le vamos a sacar su infomración mutua comparado con todos los otros puntos, para cada década, con lo que vamos a optener una matriz para cada una de estas.
 Con estas matrices ahora proseguimos a crear una red goegráfica en donde si la información mutua entre cualquier par de nodos es mayor a 0.8 se crea una arista entre estos una vez que tengamos nuestras redes queremos detectar las comunidades de estas, por lo que vamos a utilizar el método de Louvein para obtenerlas, surge el problema de que no detecta las mismas comubidades para décadas distitnas, por lo que se creo una función que compara cada comunidad con las de la década anterior para encontrar las comunidades más parecidas en vace a los nodos que se encuentran en esta, así le aplicamos la misma etiqueta a las comunidades a lo largo  de las décadas, una vez con esto le  aplicamos algunas métricas a ñas redes, donde observamos la Modularidad, el número de comunidades y vemos cuntos nodos se quedan constantes a lo largo de las transicciones de las décadas
-![a7bfe0ac-4402-4bce-890e-4f67f5ffb454](https://github.com/user-attachments/assets/2f21425a-f8f4-48e6-9b93-2f256c1fd87c)
+
 ![community_maps_over_decades](https://github.com/user-attachments/assets/97addee6-f3da-46e1-85c1-e320cb117053)
+![community_bar_charts_over_decades](https://github.com/user-attachments/assets/7f5fdb73-f830-4331-ada5-92741f7fe150)
