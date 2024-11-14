@@ -15,8 +15,12 @@ Interpolamos los datos vacios bajo los siguientes criterios:
 111
 111
 
-Para todo punto del mapa le vamos a sacar su infomración mutua comparado con todos los otros puntos, para cada década, con lo que vamos a optener una matriz para cada una de estas.
+Para todo punto del mapa le vamos a sacar su infomración mutua(tambien se probo con correlación de Person,pero al no limitarse a variables en números relaes ni relaciones lineales la infomración mutua es más general.) comparado con todos los otros puntos, para cada década, con lo que vamos a optener una matriz para cada una de estas, esto al ser un proceso computacionalmente pesado se utilizo un cluster de comuputadoras.(poner referencia de código)
+
+
+
 Con estas matrices ahora proseguimos a crear una red goegráfica en donde si la información mutua entre cualquier par de nodos es mayor a 0.8 se crea una arista entre estos una vez que tengamos nuestras redes queremos detectar las comunidades de estas, por lo que vamos a utilizar el método de Louvein para obtenerlas, surge el problema de que no detecta las mismas comubidades para décadas distitnas, por lo que se creo una función que compara cada comunidad con las de la década anterior para encontrar las comunidades más parecidas en vace a los nodos que se encuentran en esta, así le aplicamos la misma etiqueta a las comunidades a lo largo  de las décadas, una vez con esto le  aplicamos algunas métricas a ñas redes, donde observamos la Modularidad, el número de comunidades y vemos cuntos nodos se quedan constantes a lo largo de las transicciones de las décadas
 
 ![community_maps_over_decades](https://github.com/user-attachments/assets/97addee6-f3da-46e1-85c1-e320cb117053)
+Se puede observar que como es intuitivo las comunidades estan dadas por cercania geográfica, ademas de que, divisiones de la tierra clara como es el caso de la costa maritima suelen dividir a las comunidades. Así mismo existen varias comunidades que suelen ser bastantes constantes a lo loargo de las décadas.
 ![community_bar_charts_over_decades](https://github.com/user-attachments/assets/7f5fdb73-f830-4331-ada5-92741f7fe150)
