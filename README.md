@@ -4,7 +4,11 @@ Se sabe que el cambio climatico es una realidad y cada día se tiene una variabl
 
 ## Espectros de Potencia
 Utilizando los datos de https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_daily.txt observamos la anomalia de la temperatura a lo largo del tiempo desde 1880, vamos a dividir los datos en su respectiva década a la cual le vamos a aplicar la transformada de Fourier, para obtener su especto de potencia.
-Una vez teniendo esto, vamos a dividir este espectro en dos partes que nos interesa analizar, las series de tiempo cortas(0-45 días) y de medio alcnace(45-90 días?) para analizar las pendientes de estas y ver el cambio a lo largo de las décadas de las pendientes y si se pierde la correlación entre ambos periodos de días.
+Una vez teniendo esto, vamos a dividir este espectro en dos partes que nos interesa analizar, las series de tiempo cortas(0-45 días) y de medio alcnace(45-180 días) para analizar las pendientes de estas y ver el cambio a lo largo de las décadas de las pendientes y si se pierde la correlación entre ambos periodos de días.
+
+![80c67924-f9d2-40c2-be7f-21dfb0ff9d82](https://github.com/user-attachments/assets/20431544-32ec-4b50-9aad-af303fa0d38e)
+
+![3f90dc5d-e7b3-473a-9653-c8c48158a283](https://github.com/user-attachments/assets/f20a0fd5-f7b4-4447-841a-e2e0772f79ed)
 
 
 ## Anlaisis de comunidades a partir de la temperatura
