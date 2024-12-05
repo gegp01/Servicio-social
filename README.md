@@ -47,3 +47,8 @@ Este código combina análisis de redes, teoría de la información y geografía
 ![community_maps_over_decades](https://github.com/user-attachments/assets/97addee6-f3da-46e1-85c1-e320cb117053)
 Se puede observar que como es intuitivo las comunidades estan dadas por cercania geográfica, ademas de que, divisiones de la tierra clara como es el caso de la costa maritima suelen dividir a las comunidades. Así mismo existen varias comunidades que suelen ser bastantes constantes a lo loargo de las décadas.
 ![community_bar_charts_over_decades](https://github.com/user-attachments/assets/7f5fdb73-f830-4331-ada5-92741f7fe150)
+
+
+
+# DMD (Dinamic model descompsition)
+Al final no se obtuvo nada con esto pero aun asi lo pongo.
