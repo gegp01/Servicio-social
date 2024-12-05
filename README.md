@@ -1,41 +1,46 @@
 # Servicio-social
-Este repositorio incluye mis trabajos para el servicio soial en Aprendizaje de Máquina sobre el Impacto del Cambio en el Uso del Suelo sobre la Biodiversidad y el Bienestar.
-Se sabe que el cambio climatico es una realidad y cada día se tiene una variablidad en las temperaturas mayor, por lo que es de suma importancia investigar este fenómeno desde distintas perspectivas, es por eso que en este trabajo se observa el cambio clímatico desde los 1850s hasta la actualidad.Observando los disitntos cambios que se han visto a lo largo de este tiempo y tratar de entcontrar algunos patrones al respecto.
+Este repositorio incluye mis trabajos para el servicio social en Aprendizaje de Máquina sobre el Impacto del Cambio en el Uso del Suelo sobre la Biodiversidad y el Bienestar.
 
-## Espectros de Potencia
+Se sabe que el cambio climático es una realidad y que cada día existe una mayor variabilidad en las temperaturas. Por ello, es de suma importancia investigar este fenómeno desde distintas perspectivas. En este trabajo, se observa el cambio climático desde la década de 1850 hasta la actualidad, analizando los diferentes cambios que han ocurrido a lo largo de este tiempo y tratando de encontrar patrones al respecto.
 
+Espectros de Potencia
 Propósito General
+
 El objetivo del código es:
 
-1)Dividir los datos en décadas: Para estudiar tendencias temporales y características específicas en intervalos regulares.
-2)Calcular el espectro de potencia: Identificar las contribuciones de diferentes frecuencias en los datos medios de cada década.
-3)Analizar pendientes en rangos de frecuencia específicos: Determinar cómo cambia la energía (potencia) en función de la frecuencia en dos rangos definidos.
-4)Evaluar incertidumbres: Usar simulaciones aleatorias para calcular intervalos de confianza y visualizar la robustez de las pendientes y los espectros calculados.
-5)Visualizar tendencias: Mostrar gráficamente cómo las pendientes y sus intervalos de confianza varían a lo largo de las décadas.
+Dividir los datos en décadas: Para estudiar tendencias temporales y características específicas en intervalos regulares.
+Calcular el espectro de potencia: Identificar las contribuciones de diferentes frecuencias en los datos medios de cada década.
+Analizar pendientes en rangos de frecuencia específicos: Determinar cómo cambia la energía (potencia) en función de la frecuencia en dos rangos definidos.
+Evaluar incertidumbres: Usar simulaciones aleatorias para calcular intervalos de confianza y visualizar la robustez de las pendientes y los espectros calculados.
+Visualizar tendencias: Mostrar gráficamente cómo las pendientes y sus intervalos de confianza varían a lo largo de las décadas.
+Utilizando los datos de Berkeley Earth Temperature, observamos la anomalía de la temperatura a lo largo del tiempo desde 1880. Vamos a dividir los datos en sus respectivas décadas, a las cuales les aplicaremos la transformada de Fourier para obtener su espectro de potencia.
 
-Utilizando los datos de https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_daily.txt observamos la anomalia de la temperatura a lo largo del tiempo desde 1880, vamos a dividir los datos en su respectiva década a la cual le vamos a aplicar la transformada de Fourier, para obtener su especto de potencia.
-Una vez teniendo esto, vamos a dividir este espectro en dos partes que nos interesa analizar, las series de tiempo cortas(0-30 días) y de medio alcnace(30-180 días) para analizar las pendientes de estas y ver el cambio a lo largo de las décadas.
-Para esto primero vamos a descomponer las señales de la temperatura con su transformada de fourier para obtener sus freceuncias, con esto le vamos a aplicar espectro de potencia donde mide la energía conetnida en cada frecuencia de la señal, lo cual es util para encontrar las freceuncias dominantes en los datos. Una vez hecho esto y selecionados los rangos se calulan las pendientes de la relación entre la frecuancia y el espectro de potencia en un gráfico log-log, donde se obtiene esta pendiente ajustandole una regresión lineal.
-Así mismo para obtneer intervalos de confianza se relaizan varias simulaciones aleatorias de los datos  y nos qiedamos con los porcentiles(2.5% y 97.5%) para definir el intervalo de confianza.
+Una vez teniendo esto, dividiremos este espectro en dos partes que nos interesa analizar: las series de tiempo cortas (0-30 días) y de medio alcance (30-180 días), para analizar las pendientes de estas y observar el cambio a lo largo de las décadas.
+
+Para ello, primero descomponemos las señales de temperatura mediante la transformada de Fourier para obtener sus frecuencias. Luego, aplicamos el espectro de potencia, que mide la energía contenida en cada frecuencia de la señal, lo cual es útil para encontrar las frecuencias dominantes en los datos. Una vez hecho esto y seleccionados los rangos, calculamos las pendientes de la relación entre la frecuencia y el espectro de potencia en un gráfico log-log, obteniendo esta pendiente mediante un ajuste de regresión lineal.
+
+Asimismo, para obtener intervalos de confianza, realizamos varias simulaciones aleatorias de los datos y nos quedamos con los percentiles (2.5% y 97.5%) para definir el intervalo de confianza.
 
 ![80c67924-f9d2-40c2-be7f-21dfb0ff9d82](https://github.com/user-attachments/assets/20431544-32ec-4b50-9aad-af303fa0d38e)
 
 ![3f90dc5d-e7b3-473a-9653-c8c48158a283](https://github.com/user-attachments/assets/f20a0fd5-f7b4-4447-841a-e2e0772f79ed)
 
 
-## Anlaisis de comunidades a partir de la temperatura
-Utilizando los datos geograficos y de temperatura a lo largo de las decadas desde 1850 queremos ver cuales son algunas comunidades que se crean y como han cambiado estas a lo largo del tiempo.
-Primero teneindo los datos de __________  
-Interpolamos los datos vacios bajo los siguientes criterios:
-1111
-111
-111
+Análisis de Comunidades a partir de la Temperatura
+Utilizando los datos geográficos y de temperatura a lo largo de las décadas desde 1850, queremos ver cuáles son algunas comunidades que se forman y cómo han cambiado a lo largo del tiempo.
 
-Para todo punto del mapa le vamos a sacar su infomración mutua(tambien se probo con correlación de Person,pero al no limitarse a variables en números relaes ni relaciones lineales la infomración mutua es más general.)(poner referencias) comparado con todos los otros puntos, para cada década, con lo que vamos a optener una matriz para cada una de estas, esto al ser un proceso computacionalmente pesado se utilizo un cluster de comuputadoras.(poner referencia de código)
+Primero, teniendo los datos de [completar con la fuente de los datos], interpolamos los datos vacíos bajo los siguientes criterios:
 
+[Criterio 1]
+[Criterio 2]
+[Criterio 3]
+Para cada punto del mapa, calculamos su información mutua con todos los otros puntos para cada década (también se probó con correlación de Pearson, pero al no limitarse a variables en números reales ni a relaciones lineales, la información mutua es más general [referencia]). Este proceso, al ser computacionalmente pesado, se realizó utilizando un clúster de computadoras [referencia al código].
 
+Con estas matrices, procedemos a crear una red geográfica donde, si la información mutua entre cualquier par de nodos es mayor a 0.8 (con la intención de simplificar la red y enfocarnos en las relaciones más significativas), se crea una arista entre ellos. Una vez que tenemos nuestras redes, queremos detectar las comunidades para identificar agrupamientos de nodos fuertemente conectados entre sí. Para ello, utilizamos el método de Louvain [referencia], que ayuda a identificar las comunidades maximizando la modularidad—una medida de la calidad de las particiones en comunidades, donde valores altos indican comunidades bien definidas.
 
-Con estas matrices ahora proseguimos a crear una red goegráfica en donde si la información mutua entre cualquier par de nodos es mayor a 0.8 se crea una arista entre estos una vez que tengamos nuestras redes queremos detectar las comunidades de estas, por lo que vamos a utilizar el método de Louvein(poner referencias) para obtenerlas, surge el problema de que no detecta las mismas comubidades para décadas distitnas, por lo que se creo una función que compara cada comunidad con las de la década anterior para encontrar las comunidades más parecidas en vace a los nodos que se encuentran en esta, así le aplicamos la misma etiqueta a las comunidades a lo largo  de las décadas, una vez con esto le  aplicamos algunas métricas a ñas redes, donde observamos la Modularidad, el número de comunidades y vemos cuntos nodos se quedan constantes a lo largo de las transicciones de las décadas
+Como queremos ver el cambio a lo largo de las décadas, para cada década se crea una red. Sin embargo, el método de Louvain genera nuevas etiquetas para las comunidades en cada década, lo que implica que no se detectan las mismas comunidades en décadas distintas. Para solucionar esto, creamos una función que compara cada comunidad con las de la década anterior para encontrar las más similares en base a los nodos que las componen, aplicando así la misma etiqueta a las comunidades a lo largo del tiempo. Con esto, aplicamos métricas a las redes, observando la modularidad, el número de comunidades y cuántos nodos permanecen constantes a lo largo de las transiciones entre décadas.
+
+Este código combina análisis de redes, teoría de la información y geografía para identificar y visualizar comunidades en redes espaciales basadas en información mutua. El uso de métricas, reetiquetado y visualización asegura que los resultados sean interpretables y comparables a lo largo del tiempo.
 
 ![community_maps_over_decades](https://github.com/user-attachments/assets/97addee6-f3da-46e1-85c1-e320cb117053)
 Se puede observar que como es intuitivo las comunidades estan dadas por cercania geográfica, ademas de que, divisiones de la tierra clara como es el caso de la costa maritima suelen dividir a las comunidades. Así mismo existen varias comunidades que suelen ser bastantes constantes a lo loargo de las décadas.
