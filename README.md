@@ -2,8 +2,10 @@
 Este repositorio incluye mis trabajos para el servicio social en Aprendizaje de Máquina sobre el Impacto del Cambio en el Uso del Suelo sobre la Biodiversidad y el Bienestar.
 
 Se sabe que el cambio climático es una realidad y que cada día existe una mayor variabilidad en las temperaturas. Por ello, es de suma importancia investigar este fenómeno desde distintas perspectivas. En este trabajo, se observa el cambio climático desde la década de 1850 hasta la actualidad, analizando los diferentes cambios que han ocurrido a lo largo de este tiempo y tratando de encontrar patrones al respecto.
+![image](https://github.com/user-attachments/assets/b34b227c-902f-4cc9-9dbc-78cb8c225744)
 
-Espectros de Potencia
+
+# Espectros de Potencia
 Propósito General
 
 El objetivo del código es:
