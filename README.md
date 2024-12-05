@@ -3,8 +3,20 @@ Este repositorio incluye mis trabajos para el servicio soial en Aprendizaje de M
 Se sabe que el cambio climatico es una realidad y cada día se tiene una variablidad en las temperaturas mayor, por lo que es de suma importancia investigar este fenómeno desde distintas perspectivas, es por eso que en este trabajo se observa el cambio clímatico desde los 1850s hasta la actualidad.Observando los disitntos cambios que se han visto a lo largo de este tiempo y tratar de entcontrar algunos patrones al respecto.
 
 ## Espectros de Potencia
+
+Propósito General
+El objetivo del código es:
+
+1)Dividir los datos en décadas: Para estudiar tendencias temporales y características específicas en intervalos regulares.
+2)Calcular el espectro de potencia: Identificar las contribuciones de diferentes frecuencias en los datos medios de cada década.
+3)Analizar pendientes en rangos de frecuencia específicos: Determinar cómo cambia la energía (potencia) en función de la frecuencia en dos rangos definidos.
+4)Evaluar incertidumbres: Usar simulaciones aleatorias para calcular intervalos de confianza y visualizar la robustez de las pendientes y los espectros calculados.
+5)Visualizar tendencias: Mostrar gráficamente cómo las pendientes y sus intervalos de confianza varían a lo largo de las décadas.
+
 Utilizando los datos de https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_daily.txt observamos la anomalia de la temperatura a lo largo del tiempo desde 1880, vamos a dividir los datos en su respectiva década a la cual le vamos a aplicar la transformada de Fourier, para obtener su especto de potencia.
-Una vez teniendo esto, vamos a dividir este espectro en dos partes que nos interesa analizar, las series de tiempo cortas(0-45 días) y de medio alcnace(45-180 días) para analizar las pendientes de estas y ver el cambio a lo largo de las décadas de las pendientes y si se pierde la correlación entre ambos periodos de días.
+Una vez teniendo esto, vamos a dividir este espectro en dos partes que nos interesa analizar, las series de tiempo cortas(0-30 días) y de medio alcnace(30-180 días) para analizar las pendientes de estas y ver el cambio a lo largo de las décadas.
+Para esto primero vamos a descomponer las señales de la temperatura con su transformada de fourier para obtener sus freceuncias, con esto le vamos a aplicar espectro de potencia donde mide la energía conetnida en cada frecuencia de la señal, lo cual es util para encontrar las freceuncias dominantes en los datos. Una vez hecho esto y selecionados los rangos se calulan las pendientes de la relación entre la frecuancia y el espectro de potencia en un gráfico log-log, donde se obtiene esta pendiente ajustandole una regresión lineal.
+Así mismo para obtneer intervalos de confianza se relaizan varias simulaciones aleatorias de los datos  y nos qiedamos con los porcentiles(2.5% y 97.5%) para definir el intervalo de confianza.
 
 ![80c67924-f9d2-40c2-be7f-21dfb0ff9d82](https://github.com/user-attachments/assets/20431544-32ec-4b50-9aad-af303fa0d38e)
 
